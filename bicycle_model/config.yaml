@@ -1,0 +1,35 @@
+# initial system parameter values
+m_init: 1550.0            # [kg]
+v_init: 30.0              # [m/s]
+theta_init: 2800          # [kg m²]
+c_f_init: 75000           # [N/rad]
+c_r_init: 150000          # [N/rad]
+l_f_init: 1.344           # [m]
+l_r_init: 1.456           # [m]
+# initial state x := (slip_angle, yaw_rate)^T and control-input u := (steering_angle)^T values
+slip_angle_init: 0.0      # [rad]
+yaw_rate_init: 0.0        # [rad/s]
+steering_angle_init: 0.0  # [rad]
+# initial number of prediction steps and step size
+num_steps_init: 1000      # [-]
+delta_t: 0.01             # [s]
+
+# system parameter bounds
+m_bounds: [500.0, 3000.0]
+v_bounds: [3.0, 100.0]
+theta_bounds: [500.0, 7000.0]
+c_f_bounds: [10000.0, 300000.0]
+c_r_bounds: [10000.0, 300000.0]
+l_f_bounds: [0.1, 2.0]
+l_r_bounds: [0.1, 2.0]
+# state and control-input bounds
+slip_angle_bounds: [-0.3, 0.3]
+yaw_rate_bounds: [-1.0, 1.0]
+steering_angle_bounds: [-0.5, 0.5]
+
+
+# ticks
+system_parameter_ticks: 100
+x_ticks: 11
+u_ticks: 11
+
